@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Pragmatica';
+    src:
+            url('/fonts/Pragmatica-Light.woff') format('woff2'),
+            url('/fonts/PragmaticaExtended-Bold.ttf') format('woff2'),
+            url('/fonts/Pragmatica-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PragmaticaExtendedBold';
+    src: url('/fonts/PragmaticaExtended-Bold.ttf') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pragmatica', sans-serif;
+}
+
