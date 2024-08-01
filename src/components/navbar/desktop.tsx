@@ -1,8 +1,8 @@
 import {FaHeart} from "react-icons/fa6";
 
-const Navbar = () => {
+const Desktop = () => {
     return (
-        <div className="bg-black-primary text-white px-20">
+        <div className="bg-black-primary text-white px-20 max-lg:hidden">
             <div className="container mx-auto py-5 flex justify-between">
                 <img src="/logo_desktop.svg" alt="#" className={"max-h-10"}/>
 
@@ -22,7 +22,7 @@ const Navbar = () => {
                     </button>
 
                     <div className={"flex gap-1"}>
-                        <img src="/uz.svg"  alt="#"/>
+                        <img src="/uz.svg" alt="#"/>
                         <span>O'Z</span>
                     </div>
                 </div>
@@ -31,4 +31,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Desktop;

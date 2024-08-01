@@ -4,10 +4,9 @@
 
 @font-face {
     font-family: 'Pragmatica';
-    src:
-            url('/fonts/Pragmatica-Light.woff') format('woff2'),
-            url('/fonts/PragmaticaExtended-Bold.ttf') format('woff2'),
-            url('/fonts/Pragmatica-Light.woff') format('woff');
+    src: url('/fonts/Pragmatica-Light.woff') format('woff2'),
+    url('/fonts/PragmaticaExtended-Bold.ttf') format('woff2'),
+    url('/fonts/Pragmatica-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -22,4 +21,5 @@
 body {
     font-family: 'Pragmatica', sans-serif;
 }
+
 
