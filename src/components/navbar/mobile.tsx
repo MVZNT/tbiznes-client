@@ -12,7 +12,7 @@ const NavbarMobile = () => {
                         <span className={"text-sm font-bold"}>O'Z</span>
                     </div>
 
-                    <img src={'/public/menu.svg'} alt={"#"} className={"cursor-pointer w-7 h-7"}/>
+                    <img src={'/menu.svg'} alt={"#"} className={"cursor-pointer w-7 h-7"}/>
                 </div>
             </div>
 
