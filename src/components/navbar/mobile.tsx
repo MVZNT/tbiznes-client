@@ -16,8 +16,8 @@ const NavbarMobile = () => {
                 </div>
             </div>
 
-            <div className={"flex justify-between"}>
-                <span className={"font-semibold"}>+ Добавить объявление</span>
+            <div className={"flex justify-between mt-1"}>
+                <span className={"font-pragmaticaMedium"}>+ Добавить объявление</span>
 
                 <FaHeart className={"text-[23px] text-[#7E7E7E]"}/>
             </div>

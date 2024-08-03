@@ -1,12 +1,15 @@
 import {FaHeart} from "react-icons/fa6";
+import {Link} from "react-router-dom";
 
 const Desktop = () => {
     return (
         <div className="bg-black-primary text-white px-20 max-lg:hidden">
             <div className="container mx-auto py-5 flex justify-between">
-                <img src="/logo_desktop.svg" alt="#" className={"max-h-10"}/>
+                <Link to={"/"}>
+                    <img src="/logo_desktop.svg" alt="#" className={"max-h-10"}/>
+                </Link>
 
-                <ul className={"flex justify-between items-center gap-5"}>
+                <ul className={"flex justify-between font-pragmaticaLight items-center gap-5"}>
                     <li className={"cursor-pointer"}>Франшизы</li>
                     <li className={"cursor-pointer"}>Бизнес планы</li>
                     <li className={"cursor-pointer"}>Бизнес идеи</li>

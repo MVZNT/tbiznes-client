@@ -3,23 +3,33 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Pragmatica';
-    src: url('/fonts/Pragmatica-Light.woff') format('woff2'),
-    url('/fonts/PragmaticaExtended-Bold.ttf') format('woff2'),
-    url('/fonts/Pragmatica-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'pragmatica';
+    src: url('/fonts/Pragmatica-Black.ttf') format('ttf');
 }
 
 @font-face {
-    font-family: 'PragmaticaExtendedBold';
-    src: url('/fonts/PragmaticaExtended-Bold.ttf') format('woff2');
-    font-weight: bold;
-    font-style: normal;
+    font-family: 'pragmatica-light';
+    src: url('/fonts/Pragmatica-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'pragmaticaMedium';
+    src: url('/fonts/Pragmatica-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'pragmaticaBold';
+    src: url('/fonts/Pragmatica-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'pragmaticaExtendedBold';
+    src: url('/fonts/PragmaticaExtended-Bold.ttf') format('woff');
 }
 
 body {
-    font-family: 'Pragmatica', sans-serif;
+    font-family: 'pragmatica', sans-serif;
 }
 
 
