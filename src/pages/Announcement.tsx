@@ -9,8 +9,8 @@ const Announcement = () => {
     ]
 
     return (
-        <div className={"flex flex-col gap-4"}>
-            <div className={"flex gap-2"}>
+        <div className={"flex flex-col gap-2"}>
+            <div className={"flex gap-2 mt-4"}>
                 {categoriesBreadCrump.map((category, index) => (
                     <div key={index} className={"flex gap-2 font-medium"}>
                         {index !== categoriesBreadCrump.length - 1 ? (
@@ -26,7 +26,7 @@ const Announcement = () => {
             </div>
 
             <div>
-                <div className={"flex max-lg:flex-col max-lg:gap-1 mt-4 gap-3 text-sm max-lg:text-xs text-[#646464]"}>
+                <div className={"flex max-lg:flex-col max-lg:gap-1 mt-4 gap-4 text-sm max-lg:text-xs text-[#646464]"}>
                     <div className={"flex gap-1"}>
                         <span className={"text-[#353847]"}>Опубликовано:</span>
                         <span className={"text-[#7E7E7E]"}>14.06.2024</span>
@@ -41,7 +41,7 @@ const Announcement = () => {
                 </div>
             </div>
 
-            <div className={"flex justify-between gap-20 w-full"}>
+            <div className={"flex justify-between gap-20 w-full mt-1"}>
                 {/* block 1 (left) */}
                 <div className={"flex flex-col gap-10 w-[60%]"}>
                     {/* images (banner) */}

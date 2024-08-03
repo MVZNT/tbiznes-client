@@ -24,7 +24,7 @@ const Desktop = () => {
                         Добавить объявление +
                     </button>
 
-                    <div className={"flex gap-1"}>
+                    <div className={"flex gap-1 font-pragmaticaMedium"}>
                         <img src="/uz.svg" alt="#"/>
                         <span>O'Z</span>
                     </div>
