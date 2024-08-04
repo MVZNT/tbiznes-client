@@ -112,13 +112,15 @@ const Home = () => {
 
             {/*  Posts  */}
             <div className={"flex flex-col gap-4 mt-10"}>
-                        <span
-                            className={"font-pragmaticaExtendedBold text-3xl max-lg:text-base text-center"}
-                        >
-                            Последние объявления
-                        </span>
+                <span
+                    className={"font-pragmaticaExtendedBold text-3xl max-lg:text-base text-center"}
+                >
+                    Последние объявления
+                </span>
+                
                 <div
-                    className={"grid grid-cols-3 max-lg:grid-cols-2 max-lg:gap-4 gap-14 mt-10 max-lg:mt-5"}>
+                    className={"grid grid-cols-3 max-lg:grid-cols-2 max-lg:gap-4 gap-14 mt-10 max-lg:mt-5"}
+                >
                     <PostCard
                         title={"Сервисный центр"}
                         cover_image={"/post-sample.jpg"}

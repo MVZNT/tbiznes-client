@@ -1,4 +1,5 @@
 import {FiHeart} from "react-icons/fi";
+import {Link} from "react-router-dom";
 
 type PostCardProps = {
     title: string,
@@ -8,7 +9,7 @@ type PostCardProps = {
 
 const PostCard = ({title, cover_image, descr}: PostCardProps) => {
     return (
-        <div className={"flex flex-col gap-2 rounded-t-2xl"}>
+        <Link to={'/post/1'} className={"flex flex-col gap-2 rounded-t-2xl"}>
             <div
                 className={"max-lg:h-[160px] h-[250px] bg-center bg-cover w-full rounded-2xl flex justify-between items-start px-4 pt-4 max-lg:px-1 max-lg:pt-3"}
                 style={{backgroundImage: `url(${cover_image})`}}
@@ -43,7 +44,7 @@ const PostCard = ({title, cover_image, descr}: PostCardProps) => {
                     <span>Обновлено: сегодня, 20:10</span>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
