@@ -1,9 +1,18 @@
 import {Carousel} from "antd";
 import {CategoryCard, PostCard} from "../components/cards";
 import {useEffect, useState} from "react";
+import {useGetItemsForHome} from "../hooks/useAnnouncement.ts";
+import {GetItemsForHomeType} from "../types/announcement";
+import {Link} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const Home = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1024);
+
+    const getItemsForHomeQuery = useGetItemsForHome()
+    const itemsData: GetItemsForHomeType = getItemsForHomeQuery?.data?.data
+
+    const {t} = useTranslation();
 
     useEffect(() => {
         const handleResize = () => {
@@ -22,6 +31,7 @@ const Home = () => {
             <Carousel
                 autoplay
                 arrows
+                className={"z-0"}
                 draggable
                 style={{
                     display: isLargeScreen ? "block" : "none"
@@ -63,6 +73,7 @@ const Home = () => {
             <Carousel
                 autoplay
                 draggable
+                className={"z-0"}
                 style={{
                     display: isLargeScreen ? "none" : "block"
                 }}
@@ -96,17 +107,16 @@ const Home = () => {
                     <span
                         className={"font-pragmaticaExtendedBold text-3xl max-lg:text-base text-center"}
                     >
-                        Популярные категории
+                        {t("categories.popular")}
                     </span>
-
                 <div
                     className={"grid grid-cols-5 gap-7 mt-10 max-lg:mt-5 max-lg:flex max-lg:gap-3 max-lg:overflow-x-auto"}
                 >
-                    <CategoryCard name={"Услуги"} url={"/category-sample-image.svg"}/>
-                    <CategoryCard name={"Производство"} url={"/category-sample-image-2.svg"}/>
-                    <CategoryCard name={"Торговля"} url={"/category-sample-image-3.svg"}/>
-                    <CategoryCard name={"Недвижимость"} url={"/category-sample-image-4.svg"}/>
-                    <CategoryCard name={"IT"} url={"/category-sample-image-5.svg"}/>
+                    {
+                        itemsData?.popularCategories?.map(category => (
+                            <CategoryCard key={category.id} data={category}/>
+                        ))
+                    }
                 </div>
             </div>
 
@@ -115,47 +125,29 @@ const Home = () => {
                 <span
                     className={"font-pragmaticaExtendedBold text-3xl max-lg:text-base text-center"}
                 >
-                    Последние объявления
+                    {t("announcements.latest")}
                 </span>
-                
+
                 <div
                     className={"grid grid-cols-3 max-lg:grid-cols-2 max-lg:gap-4 gap-14 mt-10 max-lg:mt-5"}
                 >
-                    <PostCard
-                        title={"Сервисный центр"}
-                        cover_image={"/post-sample.jpg"}
-                        descr={"Продается действующий бизнес! Компания с сервисной лицензией Canon"}
-                    />
-
-                    <PostCard
-                        title={"Сервисный центр"}
-                        cover_image={"/post-sample.jpg"}
-                        descr={"Продается действующий бизнес! Компания с сервисной лицензией Canon"}
-                    />
-
-                    <PostCard
-                        title={"Сервисный центр"}
-                        cover_image={"/post-sample.jpg"}
-                        descr={"Продается действующий бизнес! Компания с сервисной лицензией Canon"}
-                    />
-
-                    <PostCard
-                        title={"Сервисный центр"}
-                        cover_image={"/post-sample.jpg"}
-                        descr={"Продается действующий бизнес! Компания с сервисной лицензией Canon"}
-                    />
+                    {
+                        itemsData?.latestAnnouncements?.map(announcment => (
+                            <PostCard key={announcment.id} data={announcment}/>
+                        ))
+                    }
                 </div>
 
-                <div className={"flex justify-center mt-10"}>
-                      <span
-                          className={"rounded-lg py-[10px] w-[260px] bg-[#1D2023] text-center text-white font-pragmaticaMedium cursor-pointer"}
-                      >
-                          Еще объявления
-                      </span>
+                <div className={"flex justify-center"}>
+                    <Link
+                        to={"/announcements"}
+                        className={"rounded-lg py-[10px] w-[260px] bg-[#1D2023] text-center text-white font-pragmaticaMedium cursor-pointer"}
+                    >
+                        {t("load_more")}
+                    </Link>
                 </div>
             </div>
         </div>
-
     );
 };
 

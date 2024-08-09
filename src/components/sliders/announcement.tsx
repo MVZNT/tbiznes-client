@@ -1,45 +1,30 @@
 import {IoIosArrowForward as ArrowIcon} from "react-icons/io";
 import {useState} from "react";
+import {SingleAnnouncementType} from "../../types/announcement";
 
-const AnnouncementSlider = () => {
+const AnnouncementSlider = ({data}: { data: SingleAnnouncementType }) => {
+
     const [selectedImage, setSelectedImage] = useState<{ index: number, url: string }>({
         index: 0,
-        url: "/post-image.png"
+        url: data?.images[0]?.url
     })
 
-    let sampleData = [
-        {
-            url: "/post-image.png"
-        },
-        {
-            url: "https://picsum.photos/800/520"
-        },
-        {
-            url: "https://picsum.photos/799/520"
-        },
-        {
-            url: "https://picsum.photos/798/520"
-        },
-        {
-            url: "https://picsum.photos/797/520"
-        }
-    ]
-
     const next = () => {
-        const nextIndex = (selectedImage.index + 1) % sampleData.length;
+        const nextIndex = (selectedImage.index + 1) % data?.images.length;
         setSelectedImage({
             index: nextIndex,
-            url: sampleData[nextIndex].url,
+            url: data?.images[nextIndex]?.url,
         });
     };
 
     const previous = () => {
-        const prevIndex = (selectedImage.index - 1 + sampleData.length) % sampleData.length;
+        const prevIndex = (selectedImage.index - 1 + data?.images.length) % data?.images.length;
         setSelectedImage({
             index: prevIndex,
-            url: sampleData[prevIndex].url,
+            url: data?.images[prevIndex]?.url,
         });
     };
+
 
     return (
         <div className={"flex flex-col gap-3 w-full"}>
@@ -64,17 +49,16 @@ const AnnouncementSlider = () => {
 
             <div className={"flex gap-[10px] w-full overflow-x-auto"}>
                 {
-                    sampleData.map((item, index) => (
-                        <img
+                    data?.images.map((item, index) => (
+                        <div
                             key={index}
-                            alt="#"
-                            src={item.url}
-                            className={`select-none w-1/5 max-lg:w-1/3 h-[95px] max-lg:h-[70px] rounded-[10px] cursor-pointer ${selectedImage.index === index && "border-2 border-black"}`}
+                            className={`bg-cover bg-center select-none w-1/5 max-lg:w-1/3 h-[95px] max-lg:h-[70px] rounded-[10px] cursor-pointer ${selectedImage.index === index && "border-2 border-black"}`}
                             onClick={() => setSelectedImage({
                                 index: index,
                                 url: item.url
                             })}
-                        />
+                            style={{backgroundImage: `url(${item?.url})`}}
+                        ></div>
                     ))
                 }
             </div>

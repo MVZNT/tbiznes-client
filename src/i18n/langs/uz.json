@@ -1,0 +1,28 @@
+{
+  "add_announcement": "E'lon joylash",
+  "search": "Qidiruv",
+  "search_placeholder": "E'lonlar bo'yicha qidirish",
+  "categories": {
+    "popular": "Ommabop toifalar",
+    "all": "Barcha toifalar"
+  },
+  "announcements": {
+    "latest": "Oxirgi e'lonlar",
+    "all": "Barcha e'lonlar",
+    "related": "O'xshash e'lonlar"
+  },
+  "createdAt": "Joylashtirildi",
+  "updatedAt": "Yangilandi",
+  "show_on_map": "Xaritada ko'rish",
+  "description": "Tavsif",
+  "location": "Joylashuv",
+  "show_phone": "Qo'ng'iroq qilish",
+  "write_to_telegram": "Xabar yozish",
+  "save_to_favorites": "Saqlash",
+  "main": "Asosiy",
+  "contact": "Reklama bo'yicha",
+  "social_links": "Ijtimoiy tarmoqlarimiz",
+  "public_offer": "Ommaviy offerta",
+  "user_agreement": "Foydalanuvchi shartnomasi",
+  "load_more": "Ko'proq yuklash"
+}

@@ -1,0 +1,28 @@
+{
+  "add_announcement": "Добавить объявление",
+  "search": "Найти",
+  "search_placeholder": "Поиск по объявлениям",
+  "categories": {
+    "popular": "Популярные категории",
+    "all": "Все категории"
+  },
+  "announcements": {
+    "latest": "Последние объявления",
+    "all": "Объявления",
+    "related": "Похожие объявления"
+  },
+  "createdAt": "Опубликовано",
+  "updatedAt": "Обновлено",
+  "show_on_map": "Показать на карте",
+  "description": "Описание",
+  "location": "Расположение",
+  "show_phone": "Показать телефон",
+  "write_to_telegram": "Написать",
+  "save_to_favorites": "В избранное",
+  "main": "Главная",
+  "contact": "По вопросам рекламы",
+  "social_links": "Социальные сети",
+  "public_offer": "Публичная оферта",
+  "user_agreement": "User Agreement",
+  "load_more": "Еще объявления"
+}
